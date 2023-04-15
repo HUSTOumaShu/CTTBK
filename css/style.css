@@ -1,0 +1,22 @@
+@import url(./base/button.css);
+@import url(./base/input.css);
+@import url(./base/dropdown.css);
+@import url(./base/select.css);
+@import url(/assets/fontawesome-free-6.3.0-web/css/all.min.css);
+
+.Tittle, .Info-Unit, .Info-Content {
+    font-family: 'Times New Roman', Times, serif;
+}
+.Tittle {
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+}
+.Info-Unit {
+    font-style: italic;
+    font-size: 14px;    
+}
+.Info-Content {
+    font-weight: bold;
+    font-size: 14px;
+}
