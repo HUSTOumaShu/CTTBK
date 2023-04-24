@@ -1,7 +1,7 @@
 // Author: Tran Quang Huy 20204757
 
 // Classes
-class Student {
+class TTSV {
   constructor(
     _name,
     _year,
@@ -46,8 +46,6 @@ function studentInformation() {
 function edit_StudentInformation() {
   alert("Xac nhan chinh sua thong tin ca nhan?");
   location.href = "/layouts/Edit_StudentInformation.html";
-  $("#name").text("Tran Quang Huy");
-  $("#year").text(2020);
 }
 
 function confirm_edit_StudentInformation() {
@@ -61,7 +59,7 @@ function confirm_edit_StudentInformation() {
   var _class = $("#class").val();
   var _course = $("#course option:selected").text();
   var _mail = $("#mail").val();
-  var student = new Student(
+  var ttsv = new TTSV(
     _name,
     _year,
     _level,
@@ -73,8 +71,9 @@ function confirm_edit_StudentInformation() {
     _course,
     _mail
   );
-  console.log(student);
+  console.log(ttsv);
   alert("Cap nhat thong tin thanh cong");
+  $("_name").text("abc");
   location.href = "/layouts/StudentInformation.html";
-  $("_name").text("alb");
+  $("_name").text("abc");
 }
