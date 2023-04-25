@@ -77,7 +77,7 @@ body {
     width: 30px;
     height: 30px;
     background-image: url(/assets/img/avt.jpg);
-    background-size: contain;
+    background-size:cover;
     background-repeat: no-repeat;
     border-radius: 50%;
 }
@@ -110,6 +110,9 @@ body {
     gap: 10px;
 }
 .Student-Tittle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 40px;
     border-bottom:8px solid orange;
 }
@@ -126,9 +129,9 @@ body {
 }
 .Img {
     width: 120px;
-    height: 120px;
+    height: 160px;
     background-image: url(/assets/img/avt.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 10px 10px 5px lightslategray;
 }
@@ -165,7 +168,7 @@ body {
     color: red;
 }
 
-#btnConfirm, #btnCancel {
+#btnConfirm, #btnReset, #btnCancel {
     font-size: 30px;
     border: none;
     background-color: white;
@@ -176,6 +179,13 @@ body {
 }
 #btnConfirm:hover {
     color: rgb(1, 216, 1);
+}
+
+#btnReset {
+    color: yellow;
+}
+#btnReset:hover {
+    color: orange;
 }
 
 #btnCancel {

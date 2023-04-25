@@ -1,79 +1,154 @@
 // Author: Tran Quang Huy 20204757
 
-// Classes
-class TTSV {
-  constructor(
-    _name,
-    _year,
-    _level,
-    _major,
-    _school,
-    _status,
-    _gender,
-    _class,
-    _course,
-    _mail
-  ) {
-    this._name = _name;
-    this._year = _year;
-    this._level = _level;
-    this._major = _major;
-    this._school = _school;
-    this._status = _status;
-    this._gender = _gender;
-    this._class = _class;
-    this._course = _course;
-    this._mail = _mail;
+loadData(ttsv);
+
+$("#btnEdit").click(edit);
+
+let Edit = false;
+
+function edit() {
+  alert("Xac nhan chinh sua thong tin sinh vien?");
+  $(".Content-Tittle").text("CHINH SUA THONG TIN SINH VIEN");
+
+  if (Edit == false) {
+    Edit = true;
+    let buttonGroup =
+      "<div>" +
+      '<button id="btnConfirm"><i class="fa-solid fa-square-check"></i></button>' +
+      '<button id="btnReset"><i class="fa-solid fa-rotate-right"></i></button>' +
+      '<button id="btnCancel"><i class="fa-solid fa-rectangle-xmark"></i></button>' +
+      "</div>";
+    $("#Student-Tittle_edit").append(buttonGroup);
+
+    let name =
+      '<div class="Info-Unit_icon"><i class="fa-solid fa-file-signature"></i></div>' +
+      '<input type="text" class="Input-default" id="name" placeholder="Họ và tên">';
+    $("#Info_name").empty();
+    $("#Info_name").append(name);
+
+    let year =
+      '<div class="Info-Unit_icon"><i class="fa-solid fa-calendar-days"></i></div>' +
+      '<input type="number" class="Input-default" id="year" placeholder="Năm vào trường">';
+    $("#Info_year").empty();
+    $("#Info_year").append(year);
+
+    let level =
+      '<div class="Info-Unit_icon"><i class="fa-solid fa-graduation-cap"></i></div>' +
+      '<div class="custom-select" style="width:200px;">' +
+      '<select id="level">' +
+      '<option value="0">Bậc đào tạo</option>' +
+      '<option value="1">Đại học đại trà</option>' +
+      '<option value="2">Chương trình chất lượng cao</option>' +
+      '<option value="3">Khác</option>' +
+      "</select>" +
+      "</div>";
+    $("#Info_level").empty();
+    $("#Info_level").append(level);
+
+    let major =
+      '<div class="Info-Unit_icon"><i class="fa-solid fa-graduation-cap"></i></div>' +
+      '<div class="custom-select" style="width:200px;">' +
+      '<select id="major">' +
+      '<option value="0">Chương trình đào tạo</option>' +
+      '<option value="1">Khoa học máy tính 2020</option>' +
+      '<option value="2">Kỹ thuật máy tính 2020</option>' +
+      '<option value="3">Khoa/Trung tâm 2020</option>' +
+      "</select>" +
+      "</div>";
+    $("#Info_major").empty();
+    $("#Info_major").append(major);
+
+    let school =
+      '<div class="Info-Unit_icon"><i class="fa-solid fa-school"></i></div>' +
+      '<div class="custom-select" style="width:200px;">' +
+      '<select id="school">' +
+      '<option value="0">Khoa/Viện quản lý</option>' +
+      '<option value="1">Trường Công nghệ Thông tin va Truyền thông</option>' +
+      '<option value="2">Khác</option>' +
+      "</select>" +
+      "</div>";
+    $("#Info_school").empty();
+    $("#Info_school").append(school);
+
+    let status =
+      '<div class="Info-Unit_icon"><i class="fa-solid fa-school"></i></div>' +
+      '<div class="custom-select" style="width:200px;">' +
+      '<select id="status">' +
+      '<option value="0">Tình trạng học tập</option>' +
+      '<option value="1">Học</option>' +
+      '<option value="2">Đã ra trường</option>' +
+      '<option value="3">Khác</option>' +
+      "</select>" +
+      "</div>";
+    $("#Info_status").empty();
+    $("#Info_status").append(status);
+
+    let gender =
+      '<div class="Info-Unit_icon"><i class="fa-solid fa-file-signature"></i></div>' +
+      '<div class="custom-select" style="width:200px;">' +
+      '<select id="gender">' +
+      '<option value="0">Giới tính</option>' +
+      '<option value="1">Nam</option>' +
+      '<option value="2">Nữ</option>' +
+      '<option value="3">Khác</option>' +
+      "</select>" +
+      "</div>";
+    $("#Info_gender").empty();
+    $("#Info_gender").append(gender);
+
+    let class0 =
+      '<div class="Info-Unit_icon"><i class="fa-solid fa-graduation-cap"></i></div>' +
+      '<input type="text" class="Input-default" id="class" placeholder="Lớp">';
+    $("#Info_class").empty();
+    $("#Info_class").append(class0);
+
+    let course =
+      '<div class="Info-Unit_icon"><i class="fa-solid fa-graduation-cap"></i></div>' +
+      '<div class="custom-select" style="width:200px;">' +
+      '<select id="course">' +
+      '<option value="0">Khóa</option>' +
+      '<option value="1">62</option>' +
+      '<option value="2">63</option>' +
+      '<option value="3">64</option>' +
+      '<option value="1">65</option>' +
+      '<option value="2">66</option>' +
+      '<option value="3">67</option>' +
+      "</select>" +
+      "</div>";
+    $("#Info_course").empty();
+    $("#Info_course").append(course);
+
+    let mail =
+      '<div class="Info-Unit_icon" ><i class="fa-solid fa-envelope"></i></div>' +
+      '<input type="email" class="Input-default" id="mail" placeholder="Email"></input>';
+    $("#Info_mail").empty();
+    $("#Info_mail").append(mail);
+
+    $("#btnReset").click(reset);
+    $("#btnCancel").click(function () {
+      location.href = "/layouts/StudentInformation.html";
+      loadData(ttsv);
+    });
+    $("#btnConfirm").click(confirm);
   }
+
+  // function confirm() {
+
+  // } -- fixed
+
+  // function reset() {} -- fixed
 }
 
-// Edit information of student
-$("#btnEdit").click(edit_StudentInformation);
-$("#btnUpdateInfo").click(edit_StudentInformation);
-$("#btnConfirm").click(confirm_edit_StudentInformation);
-
-// Go to information page of student
-$("#btnStudentInfo").click(studentInformation);
-$("#btnCancel").click(studentInformation);
-$("#btnDashboard").click(studentInformation);
-$("#Logo_ctt").click(studentInformation);
-
-function studentInformation() {
-  location.href = "/layouts/StudentInformation.html";
-}
-
-// Edit information of student
-function edit_StudentInformation() {
-  alert("Xac nhan chinh sua thong tin ca nhan?");
-  location.href = "/layouts/Edit_StudentInformation.html";
-}
-
-function confirm_edit_StudentInformation() {
-  var _name = $("#name").val();
-  var _year = $("#year").val();
-  var _level = $("#level option:selected").text();
-  var _major = $("#major option:selected").text();
-  var _school = $("#school option:selected").text();
-  var _status = $("#status option:selected").text();
-  var _gender = $("#gender option:selected").text();
-  var _class = $("#class").val();
-  var _course = $("#course option:selected").text();
-  var _mail = $("#mail").val();
-  var ttsv = new TTSV(
-    _name,
-    _year,
-    _level,
-    _major,
-    _school,
-    _status,
-    _gender,
-    _class,
-    _course,
-    _mail
-  );
-  console.log(ttsv);
-  alert("Cap nhat thong tin thanh cong");
-  $("_name").text("abc");
-  location.href = "/layouts/StudentInformation.html";
-  $("_name").text("abc");
+function loadData(ttsv) {
+  $("#_name").text(ttsv._name);
+  $("#_year").text(ttsv._year);
+  $("#_level").text(ttsv._level);
+  $("#_major").text(ttsv._major);
+  $("#_school").text(ttsv._school);
+  $("#_status").text(ttsv._status);
+  $("#_gender").text(ttsv._gender);
+  $("#_class").text(ttsv._class);
+  $("#_course").text(ttsv._course);
+  $("#_mail").text(ttsv._mail);
+  ttsv.log();
 }
