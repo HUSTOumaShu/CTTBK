@@ -175,9 +175,9 @@ function edit() {
         '<img class="Img" src="' +
         avatar +
         '"><div class="Info-Content"> MSSV:20204757</div>';
-      if ($(".Img").attr("src") == "/assets/img/avt.jpg") {
+      if ($(".Img").attr("src") == "../assets/img/avt.jpg") {
         img =
-          '<img class="Img" src="/assets/img/avt.jpg"><div class="Info-Content"> MSSV:20204757</div>';
+          '<img class="Img" src="../assets/img/avt.jpg"><div class="Info-Content"> MSSV:20204757</div>';
       }
       $(".Student_img").empty();
       $(".Student_img").append(img);
@@ -252,17 +252,17 @@ function edit() {
   }
 
   function reset() {
-    $(".Img").attr("src", "/assets/img/avt.jpg");
+    $(".Img").attr("src", "../assets/img/avt.jpg");
     $("#name").val(ttsv._name);
     $("#year").val(ttsv._year);
     $("#level").val(ttsv.getLevelVal());
-    $("#_major").val(ttsv.getMajorVal());
-    $("#_school").val(ttsv.getSchoolVal());
-    $("#_status").val(ttsv.getStatusVal());
-    $("#_gender").val(ttsv.getGenderVal());
-    $("#_class").val(ttsv._class);
-    $("#_course").val(ttsv.getCourse());
-    $("#_mail").val(ttsv._mail);
+    $("#major").val(ttsv.getMajorVal());
+    $("#school").val(ttsv.getSchoolVal());
+    $("#status").val(ttsv.getStatusVal());
+    $("#gender").val(ttsv.getGenderVal());
+    $("#class").val(ttsv._class);
+    $("#course").val(ttsv.getCourse());
+    $("#mail").val(ttsv._mail);
     ttsv.log();
   }
 }
