@@ -130,7 +130,7 @@ body {
 .Img {
     width: 120px;
     height: 160px;
-    background-image: url(/assets/img/avt.jpg);
+    /* background-image: url(/assets/img/avt.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 10px 10px 5px lightslategray;
