@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinh sua thong tin sinh vien</title>
+    <link rel="stylesheet" href="../css/layouts/StudentInformation.css">
+</head>
+<body>
+    <div class="Container">
+
+        <div class="Header">
+            <div id="Logo_ctt" class="Logo"></div>
+            <div class="Border-Gradient"></div>
+            <div class="Header_List">
+                <div class="Dropdown">
+                    <div class="Dropdown_select">
+                        <div></div>
+                        <span class="select">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            &nbsp; Đào tạo Đại học
+                        </span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="Dropdown_list">
+                        <button class="Dropdown_list-button">Quy định - Quy chế</button>
+                        <button class="Dropdown_list-button">Các ngành đào tạo</button>
+                        <button class="Dropdown_list-button">Kế hoạch học tập</button>
+                        <button class="Dropdown_list-button">Tin tức - Thông báo</button>
+                        <button class="Dropdown_list-button">Thông tin văn bằng 2</button>
+                        <button class="Dropdown_list-button">Chương trình đặc biệt</button>
+                        <button class="Dropdown_list-button">Biểu mẫu</button>
+                        <button class="Dropdown_list-button">Liên hệ</button>
+                    </div>
+                </div>
+
+                <div class="Dropdown">
+                    <div class="Dropdown_select">
+                        <div></div>
+                        <span class="select">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            &nbsp; Đào tạo Sau đại học
+                        </span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="Dropdown_list">
+                        <button class="Dropdown_list-button">Tuyển sinh</button>
+                        <button class="Dropdown_list-button">Đào tạo</button>
+                        <button class="Dropdown_list-button">Mẫu văn bản giấy tờ</button>
+                        <button class="Dropdown_list-button">Văn bản - Quy chế</button>
+                        <button class="Dropdown_list-button">Thông tin văn bằng</button>
+                        <button class="Dropdown_list-button">Trang thông tin cá nhân</button>
+                        <button class="Dropdown_list-button">Liên hệ</button>
+                    </div>
+                </div>
+
+                <div class="Dropdown">
+                    <div class="Dropdown_select">
+                        <div></div>
+                        <span class="select">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            &nbsp; Công tác sinh viên
+                        </span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="Dropdown_list">
+                        <button class="Dropdown_list-button">Thông báo</button>
+                        <button class="Dropdown_list-button">Hỏi - Đáp</button>
+                        <button class="Dropdown_list-button">Học phí</button>
+                        <button class="Dropdown_list-button">Học bổng tài trợ</button>
+                        <button class="Dropdown_list-button">Việc làm</button>
+                        <button class="Dropdown_list-button">Biểu mẫu</button>
+                        <button class="Dropdown_list-button">Cựu sinh viên</button>
+                        <button class="Dropdown_list-button">Liên hệ</button>
+                    </div>
+                </div>
+
+                <div class="Dropdown">
+                    <div class="Dropdown_select">
+                        <div></div>
+                        <span class="select">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            &nbsp; Tra cứu văn bằng
+                        </span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="Dropdown_list">
+                    </div>
+                </div>
+            </div>
+            <button id="btnDashboard">Trang chủ</button>
+        </div>
+
+        <!-- -------------------------- -->
+
+        <div class="Board">
+            <div class="Menu">
+                <div class="Menu_Board">
+                    <div class="Avatar">
+                        <div class="Avatar_img"></div>
+                        <div class="Tittle">TRẦN QUANG HUY</div>
+                    </div>
+                    <button id="btnMessage" class="Menu_Button">
+                        <div>Thư báo</div>
+                        <div id="messNum"><strong>0</strong></div>
+                    </button>
+                    <button id="btnChangePassword" class="Menu_Button">Đổi mật khẩu</button>
+                    <button id="btnUpdateEmail" class="Menu_Button">Cập nhật lại mật khẩu Email trường</button>
+                    <button id="btnLogOut" class="Menu_Button">Thoát đăng nhập</button>
+                    <button id="btnNewEmail" class="Menu_Button">Thông tin mật khẩu Email cấp mới</button>
+                    <button id="btnConfirmMedical" class="Menu_Button">Xác nhận khai báo y tế</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">QUẢN LÝ HỒ SƠ SINH VIÊN</div>
+                    <button id="btnStudentInfo" class="Menu_Button">Thông tin sinh viên</button>
+                    <button id="btnUpdateInfo" class="Menu_Button">Cập nhật thông tin cá nhân</button>
+                    <button id="btnClassInfo" class="Menu_Button">Thông tin lớp sinh viên</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">ĐÀO TẠO</div>
+                    <button class="Menu_Button">
+                        <i id="Menu_Button_icon" class="fa-solid fa-angle-right"></i>
+                        &nbsp;Chương trình đào tạo
+                    </button>
+                    <button class="Menu_Button">
+                        <i id="Menu_Button_icon" class="fa-solid fa-angle-right"></i>
+                        &nbsp; Kế hoạch học tập
+                    </button>
+                    <button class="Menu_Button">
+                        <i id="Menu_Button_icon" class="fa-solid fa-angle-right"></i>
+                        &nbsp; Kết quả học tập
+                    </button>
+                    <button class="Menu_Button">
+                        <i id="Menu_Button_icon" class="fa-solid fa-angle-right"></i>
+                        &nbsp;Đồ án - Tốt nghiệp
+                    </button>
+                    <button class="Menu_Button">Thời khóa biểu tạm thời</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">TƯ VẤN TRỰC TUYẾN</div>
+                    <button class="Menu_Button">Hỏi đáp - Tư vấn trực tuyến</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">TÀI CHÍNH HỌC VỤ</div>
+                    <button class="Menu_Button">Thông tin công nợ học phí</button>
+                    <button class="Menu_Button">Thanh toán học phí trực tuyến</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">DỊCH VỤ HÀNH CHÍNH</div>
+                    <button class="Menu_Button">ĐK cấp giấy tờ</button>
+                </div>
+            </div>
+
+        <!-- -------------------------- -->
+
+            <div class="Content">
+                <div class="Tittle Content-Tittle">CHỈNH SỬA THÔNG TIN CÁ NHÂN</div>
+
+                <div class="Content_Board">
+
+                    <div class="Tittle Student-Tittle"
+                    style="display: flex; justify-content: space-between;">
+                        THÔNG TIN SINH VIÊN &nbsp;
+                        <div>
+                            <button id="btnConfirm"><i class="fa-solid fa-square-check"></i></button>
+                            <button id="btnReset"><i class="fa-solid fa-rotate-right"></i></button>
+                            <button id="btnCancel"><i class="fa-solid fa-rectangle-xmark"></i></button>
+                        </div>
+                    </div>
+
+                    <form class="Student_Board" action="/action_page.php">
+                        <div class="Student_img">
+                            <div class="Img"></div>
+                            <div class="Info-Content"> MSSV:20204757</div>
+                            <input type="file" id="img" name="img" accept="image/*">
+                        </div>
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit_icon"><i class="fa-solid fa-file-signature"></i></div>
+                                <input type="text" class="Input-default" id="name" placeholder="Họ và tên">
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit_icon"><i class="fa-solid fa-calendar-days"></i></div>
+                                <input type="number" class="Input-default" id="year" placeholder="Năm vào trường">
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit_icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="custom-select" style="width:200px;">
+                                    <select id="level">
+                                      <option value="0">Bậc đào tạo</option>
+                                      <option value="1">Đại học đại trà</option>
+                                      <option value="2">Chương trình chất lượng cao</option>
+                                      <option value="3">Khác</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit_icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="custom-select" style="width:200px;">
+                                    <select id="major">
+                                      <option value="0">Chương trình đào tạo</option>
+                                      <option value="1">Khoa học máy tính 2020</option>
+                                      <option value="2">Kỹ thuật máy tính 2020</option>
+                                      <option value="3">Khoa/Trung tâm 2020</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit_icon"><i class="fa-solid fa-school"></i></div>
+                                <div class="custom-select" style="width:200px;">
+                                    <select id="school">
+                                      <option value="0">Khoa/Viện quản lý</option>
+                                      <option value="1">Trường Công nghệ Thông tin va Truyền thông</option>
+                                      <option value="2">Khác</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit_icon"><i class="fa-solid fa-school"></i></div>
+                                <div class="custom-select" style="width:200px;">
+                                    <select id="status">
+                                      <option value="0">Tình trạng học tập</option>
+                                      <option value="1">Học</option>
+                                      <option value="2">Đã ra trường</option>
+                                      <option value="3">Khác</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit_icon"><i class="fa-solid fa-file-signature"></i></div>
+                                <div class="custom-select" style="width:200px;">
+                                    <select id="gender">
+                                      <option value="0">Giới tính</option>
+                                      <option value="1">Nam</option>
+                                      <option value="2">Nữ</option>
+                                      <option value="3">Khác</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit_icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <input type="text" class="Input-default" id="class" placeholder="Lớp">
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit_icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="custom-select" style="width:200px;">
+                                    <select id="course">
+                                      <option value="0">Khóa</option>
+                                      <option value="1">62</option>
+                                      <option value="2">63</option>
+                                      <option value="3">64</option>
+                                      <option value="1">65</option>
+                                      <option value="2">66</option>
+                                      <option value="3">67</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit_icon" ><i class="fa-solid fa-envelope"></i></div>
+                                <input type="email" class="Input-default" id="mail" placeholder="Email">
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <div class="Tittle Student-Tittle">THÔNG TIN HỌC TẬP</div>
+
+                    <div class="Student_Board">
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit">Tổng kết học kỳ :</div>
+                                <div class="Info-Content">20212</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Trung bình tích lũy : </div>
+                                <div class="Info-Content">3.32</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Số TC nợ đăng ký :</div>
+                                <div class="Info-Content">0</div>
+                            </div>
+                        </div>
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit">Số TC tích lũy :</div>
+                                <div class="Info-Content">67</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Trình độ sinh viên :</div>
+                                <div class="Info-Content">3</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Mức cảnh cáo :</div>
+                                <div class="Info-Content">M0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Tittle Student-Tittle">THÔNG TIN CÁ NHÂN</div>
+
+                    <div class="Student_Board">
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit">Dân tộc :</div>
+                                <div class="Info-Content">Kinh</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Năm TN cấp 3 :</div>
+                                <div class="Info-Content">2020</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Địa chỉ :</div>
+                                <div class="Info-Content">XÃ KIM AN, HUYỆN THANH OAI, THÀNH PHỐ HÀ NỘI</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Số CMTND :</div>
+                                <div class="Info-Content">001***66</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Nơi cấp :</div>
+                                <div class="Info-Content">HÀ NỘI</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Họ và tên bố :</div>
+                                <div class="Info-Content">TRẦN QUANG HUẤN</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Năm sinh :</div>
+                                <div class="Info-Content">1974</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Nghề nghiệp :</div>
+                                <div class="Info-Content">CÁN BỘ</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Điện thoại :</div>
+                                <div class="Info-Content">036***68</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Email :</div>
+                                <div class="Info-Content">TR*@*IL.COM</div>
+                            </div>
+                        </div>
+
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit">Tôn giao :</div>
+                                <div class="Info-Content">Không</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Trường THPT :</div>
+                                <div class="Info-Content">THANH OAI A - HÀ NỘI</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Hộ khẩu :</div>
+                                <div class="Info-Content">XÃ KIM AN, HUYỆN THANH OAI, THÀNH PHỐ HÀ NỘI</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Số điện thoại :</div>
+                                <div class="Info-Content">096***14</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Họ và tên mẹ :</div>
+                                <div class="Info-Content">HÀ THỊ TÂM</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Năm sinh :</div>
+                                <div class="Info-Content">1975</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Nghề nghiệp :</div>
+                                <div class="Info-Content">LÀM RUỘNG</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Điện thoại :</div>
+                                <div class="Info-Content">038***02</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Email :</div>
+                                <div class="Info-Content">HA*@*IL.COM</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Info">
+                        <div class="Info-Unit">Ghi chú :</div>
+                        <div class="Info-Content">Nếu sinh viên thay thông tin cá nhân của mình
+                            chưa chính xác, vui lòng liên hệ phòng Đào tạo để cập nhật lại.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="Footer">
+            <div class="Footer_img"></div>
+            <div class="Footer_Content">
+                <p>Đại học Bách Khoa Hà Nộii</p>
+                <p>Số 1 Đại Cồ Việt, Hai Bà Trưng</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="Dialog_Confirm">
+
+    </div>
+
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/select.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thong tin sinh vien</title>
+    <link rel="stylesheet" href="../css/layouts/StudentInformation.css">
+</head>
+<body>
+    <div class="Container">
+
+        <div class="Header">
+            <div id="Logo_ctt" class="Logo"></div>
+            <div class="Border-Gradient"></div>
+            <div class="Header_List">
+                <div class="Dropdown">
+                    <div class="Dropdown_select">
+                        <div></div>
+                        <span class="select">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            &nbsp; Dao tao Dai hoc
+                        </span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="Dropdown_list">
+                        <button class="Dropdown_list-button">Quy dinh - Quy che</button>
+                        <button class="Dropdown_list-button">Cac nganh dao tao</button>
+                        <button class="Dropdown_list-button">Ke hoach hoc tap</button>
+                        <button class="Dropdown_list-button">Tin tuc - Thong bao</button>
+                        <button class="Dropdown_list-button">Thong tin van bang 2</button>
+                        <button class="Dropdown_list-button">Chuong trinh dac biet</button>
+                        <button class="Dropdown_list-button">Bieu mau</button>
+                        <button class="Dropdown_list-button">Lien he</button>
+                    </div>
+                </div>
+
+                <div class="Dropdown">
+                    <div class="Dropdown_select">
+                        <div></div>
+                        <span class="select">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            &nbsp; Dao tao Sau dai hoc
+                        </span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="Dropdown_list">
+                        <button class="Dropdown_list-button">Tuyen sinh</button>
+                        <button class="Dropdown_list-button">Dao tao</button>
+                        <button class="Dropdown_list-button">Mau van ban giay to</button>
+                        <button class="Dropdown_list-button">Van ban - Quy che</button>
+                        <button class="Dropdown_list-button">Thong tin van bang</button>
+                        <button class="Dropdown_list-button">Trang thong tin ca nhan</button>
+                        <button class="Dropdown_list-button">Lien he</button>
+                    </div>
+                </div>
+
+                <div class="Dropdown">
+                    <div class="Dropdown_select">
+                        <div></div>
+                        <span class="select">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            &nbsp; Cong tac sinh vien
+                        </span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="Dropdown_list">
+                        <button class="Dropdown_list-button">Thong bao</button>
+                        <button class="Dropdown_list-button">Hoi - Dap</button>
+                        <button class="Dropdown_list-button">Hoc phi</button>
+                        <button class="Dropdown_list-button">Hoc bong tai tro</button>
+                        <button class="Dropdown_list-button">Viec lam</button>
+                        <button class="Dropdown_list-button">Bieu mau</button>
+                        <button class="Dropdown_list-button">Cuu sinh vien</button>
+                        <button class="Dropdown_list-button">Lien he</button>
+                    </div>
+                </div>
+
+                <div class="Dropdown">
+                    <div class="Dropdown_select">
+                        <div></div>
+                        <span class="select">
+                            <i class="fa-solid fa-up-right-from-square"></i>
+                            &nbsp; Tra cuu van bang
+                        </span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    <div class="Dropdown_list">
+                    </div>
+                </div>
+            </div>
+            <button id="btnDashboard">Trang chu</button>
+        </div>
+
+        <!-- -------------------------- -->
+
+        <div class="Board">
+            <div class="Menu">
+                <div class="Menu_Board">
+                    <div class="Avatar">
+                        <div class="Avatar_img"></div>
+                        <div class="Tittle">TRẦN QUANG HUY</div>
+                    </div>
+                    <button id="btnMessage" class="Menu_Button">
+                        <div>Thư báo</div>
+                        <div id="messNum"><strong>0</strong></div>
+                    </button>
+                    <button id="btnChangePassword" class="Menu_Button">Đổi mật khẩu</button>
+                    <button id="btnUpdateEmail" class="Menu_Button">Cập nhật lại mật khẩu Email trường</button>
+                    <button id="btnLogOut" class="Menu_Button">Thoát đăng nhập</button>
+                    <button id="btnNewEmail" class="Menu_Button">Thông tin mật khẩu Email cấp mới</button>
+                    <button id="btnConfirmMedical" class="Menu_Button">Xác nhận khai báo y tế</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">QUẢN LÝ HỒ SƠ SINH VIÊN</div>
+                    <button id="btnStudentInfo" class="Menu_Button">Thông tin sinh viên</button>
+                    <button id="btnUpdateInfo" class="Menu_Button">Cập nhật thông tin cá nhân</button>
+                    <button id="btnClassInfo" class="Menu_Button">Thông tin lớp sinh viên</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">ĐÀO TẠO</div>
+                    <button class="Menu_Button">
+                        <i id="Menu_Button_icon" class="fa-solid fa-angle-right"></i>
+                        &nbsp;Chương trình đào tạo
+                    </button>
+                    <button class="Menu_Button">
+                        <i id="Menu_Button_icon" class="fa-solid fa-angle-right"></i>
+                        &nbsp; Kế hoạch học tập
+                    </button>
+                    <button class="Menu_Button">
+                        <i id="Menu_Button_icon" class="fa-solid fa-angle-right"></i>
+                        &nbsp; Kết quả học tập
+                    </button>
+                    <button class="Menu_Button">
+                        <i id="Menu_Button_icon" class="fa-solid fa-angle-right"></i>
+                        &nbsp;Đồ án - Tốt nghiệp
+                    </button>
+                    <button class="Menu_Button">Thời khóa biểu tạm thời</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">TƯ VẤN TRỰC TUYẾN</div>
+                    <button class="Menu_Button">Hỏi đáp - Tư vấn trực tuyến</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">TÀI CHÍNH HỌC VỤ</div>
+                    <button class="Menu_Button">Thông tin công nợ học phí</button>
+                    <button class="Menu_Button">Thanh toán học phí trực tuyến</button>
+                </div>
+                <div class="Menu_Board">
+                    <div class="Tittle">DỊCH VỤ HÀNH CHÍNH</div>
+                    <button class="Menu_Button">ĐK cấp giấy tờ</button>
+                </div>
+            </div>
+
+        <!-- -------------------------- -->
+
+            <div class="Content">
+                <div class="Tittle Content-Tittle">
+                    THÔNG TIN CÁ NHÂN
+                </div>
+
+                <div class="Content_Board">
+
+                    <div id="Student-Tittle1" class="Tittle Student-Tittle">
+                        <div id="groupTittle1" class="Tittle_Group">
+                            Thong tin sinh vien_20204757 &nbsp;
+                            <!-- <button id="btnEdit"><i class="fa-solid fa-pen-to-square"></i></button> -->
+                        </div>
+                        <div style="display:flex; gap: 8px;">
+                            <button id="addItem1" class="DOM_Button addItem">
+                                <i class="fa-solid fa-square-plus"></i>
+                                Add Info Item
+                            </button>
+                            <button id="addGroup1" class="DOM_Button addGroup">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Add Group Item
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="Student_Board"> -->
+
+                        <!-- <div class="Student_img">
+                            <img class="Img" src="../assets/img/avt.jpg">
+                            <div class="Info-Content"> MSSV:20204757</div>
+                        </div>
+                        <div class="Student_Info">
+                            <div id="Info_name" class="Info">
+                                <div class="Info-Unit">Ho va ten :</div>
+                                <div id="_name" class="Info-Content"></div>
+                            </div>
+                            <div id="Info_year" class="Info">
+                                <div class="Info-Unit">Nam vao truong :</div>
+                                <div id="_year" class="Info-Content"></div>
+                            </div>
+                            <div id="Info_level" class="Info">
+                                <div class="Info-Unit">Bac dao tao :</div>
+                                <div id="_level" class="Info-Content"></div>
+                            </div>
+                            <div id="Info_major" class="Info">
+                                <div class="Info-Unit">Chuong trinh :</div>
+                                <div id="_major" class="Info-Content"></div>
+                            </div>
+                            <div id="Info_school" class="Info">
+                                <div class="Info-Unit">Khoa/Vien quan ly :</div>
+                                <div id="_school" class="Info-Content"></div>
+                            </div>
+                            <div id="Info_status" class="Info">
+                                <div class="Info-Unit">Tinh trang hoc tap : </div>
+                                <div id="_status" class="Info-Content"></div>
+                            </div>
+                        </div>
+
+                        <div class="Student_Info">
+                            <div id="Info_gender" class="Info">
+                                <div class="Info-Unit">Gioi tinh :</div>
+                                <div id="_gender" class="Info-Content"></div>
+                            </div>
+                            <div id="Info_class" class="Info">
+                                <div class="Info-Unit">Lop : </div>
+                                <div id="_class" class="Info-Content"></div>
+                            </div>
+                            <div id="Info_course" class="Info">
+                                <div class="Info-Unit">Khoa hoc : </div>
+                                <div id="_course" class="Info-Content"></div>
+                            </div>
+                            <div id="Info_mail" class="Info">
+                                <div class="Info-Unit">Email :</div>
+                                <div id="_mail" class="Info-Content"></div>
+                            </div>
+                        </div> -->
+
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div id="tittle1_1" class="Info_Tittle">Ho va ten: </div>
+                                <input type="text" class="Input-default" id="input1_1" placeholder="" style="margin-left: 50px;">
+                                <button id="deleteItem1_1" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+
+                            <div class="Info">
+                                <div id="tittle1_2" class="Info_Tittle">Ma so sinh vien: </div>
+                                <input type="text" class="Input-default" id="input1_2" placeholder="" style="margin-left: 50px;">
+                                <button id="deleteItem1_2" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+
+                            <div class="Info">
+                                <div id="tittle1_3" class="Info_Tittle">Chuong trinh dao tao: </div>
+                                <input type="text" class="Input-default" id="input1_3" placeholder="" style="margin-left: 50px;">
+                                <button id="deleteItem1_3" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+
+                        </div>
+
+                    <!-- </div> -->
+
+                    <!-- Second Board -->
+
+                        <div class="Tittle Student-Tittle">
+                            <div id="groupTittle2" class="Tittle_Group">THONG TIN HOC TAP
+                                <button id="deleteGroup2" class="Button-delete_Group"><i class="fa-solid fa-trash-can"></i></button>
+                            </div>
+                            <div style="display:flex; gap: 8px;">
+                                <button id="addItem2" class="DOM_Button addItem">
+                                    <i class="fa-solid fa-square-plus"></i>
+                                    Add Info Item
+                                </button>
+                                <button id="addGroup2" class="DOM_Button addGroup">
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                    Add Group Item
+                                </button>
+                            </div>
+                        </div>
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div id="tittle2_1" class="Info_Tittle">Ho va ten: </div>
+                                <input type="text" class="Input-default" id="input2_1" placeholder="" style="margin-left: 50px;">
+                                <button id="delete2_1" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+
+                            <div class="Info">
+                                <div id="tittle2_2" class="Info_Tittle">Ma so sinh vien: </div>
+                                <input type="text" class="Input-default" id="input2_2" placeholder="" style="margin-left: 50px;">
+                                <button id="delete2_2" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+
+                            <div class="Info">
+                                <div id="tittle2_3" class="Info_Tittle">Chuong trinh dao tao: </div>
+                                <input type="text" class="Input-default" id="input2_3" placeholder="" style="margin-left: 50px;">
+                                <button id="delete2_3" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+
+                        </div>
+
+
+
+                    <!-- <div class="Tittle Student-Tittle">THONG TIN HOC TAP</div>
+
+                    <div class="Student_Board">
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit">Tong ket hoc ky :</div>
+                                <div class="Info-Content">&nbsp;20212</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Trung binh tich luy : </div>
+                                <div class="Info-Content">&nbsp;3.32</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">So TC no dang ky :</div>
+                                <div class="Info-Content">&nbsp;0</div>
+                            </div>
+                        </div>
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit">So TC tich luy :</div>
+                                <div class="Info-Content">&nbsp;67</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Trinh do sinh vien :</div>
+                                <div class="Info-Content">&nbsp;3</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Muc canh cao :</div>
+                                <div class="Info-Content">&nbsp;M0</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Tittle Student-Tittle">THONG TIN CA NHAN</div>
+
+                    <div class="Student_Board">
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit">Dan toc :</div>
+                                <div class="Info-Content">&nbsp;Kinh</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Nam TN cap 3 :</div>
+                                <div class="Info-Content">&nbsp;2020</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Dia chi :</div>
+                                <div class="Info-Content">&nbsp;XA KIM AN, HUYEN THANH OAI, THANH PHO HA NOI</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">So CMTND :</div>
+                                <div class="Info-Content">&nbsp;001***66</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Noi cap :</div>
+                                <div class="Info-Content">&nbsp;HA NOI</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Ho va ten bo :</div>
+                                <div class="Info-Content">&nbsp;TRAN QUANG HUAN</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Nam sinh :</div>
+                                <div class="Info-Content">&nbsp;1974</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Nghe nghiep :</div>
+                                <div class="Info-Content">&nbsp;CAN BO</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Dien thoai :</div>
+                                <div class="Info-Content">&nbsp;036***68</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Email :</div>
+                                <div class="Info-Content">&nbsp;TR*@*IL.COM</div>
+                            </div>
+                        </div>
+
+                        <div class="Student_Info">
+                            <div class="Info">
+                                <div class="Info-Unit">Ton giao :</div>
+                                <div class="Info-Content">&nbsp;Khong</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Truong THPT :</div>
+                                <div class="Info-Content">&nbsp;THANH OAI A - HA NOI</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Ho khau :</div>
+                                <div class="Info-Content">&nbsp;XA KIM AN, HUYEN THANH OAI, THANH PHO HA NOI</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">So dien thoai :</div>
+                                <div class="Info-Content">&nbsp;096***14</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Ho va ten me :</div>
+                                <div class="Info-Content">&nbsp;HA THI TAM</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Nam sinh :</div>
+                                <div class="Info-Content">&nbsp;1975</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Nghe nghiep :</div>
+                                <div class="Info-Content">&nbsp;LAM RUONG</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Dien thoai :</div>
+                                <div class="Info-Content">&nbsp;038***02</div>
+                            </div>
+                            <div class="Info">
+                                <div class="Info-Unit">Email :</div>
+                                <div class="Info-Content">&nbsp;HA*@*IL.COM</div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="Info">
+                        <div class="Info-Unit">Ghi chu :</div>
+                        <div class="Info-Content">&nbsp;Neu sinh vien thay thong tin ca nhan cua minh
+                            chua chinh xac, vui long lien he phong Dao tao de cap nhat lai.
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+
+        <div class="Footer">
+            <div class="Footer_img"></div>
+            <div class="Footer_Content">
+                <p>Dai hoc Bach Khoa Ha Noi</p>
+                <p>So 1 Dai Co Viet, Hai Ba Trung</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/StudentInformation.js"></script>
+    <!-- <script src="/js/index.js"></script> -->
+    <script src="../js/index_dom.js"></script>
+    <script src="../js/select.js"></script>
+
+</body>
+</html>
