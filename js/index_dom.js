@@ -149,6 +149,9 @@ function changeGroupNameFn(obj) {
         $(changeGroupName).dblclick(function () {
           changeGroupNameFn(this);
         });
+        $("#deleteGroup" + obj.id[11]).click(function () {
+          deleteGroupFn(this);
+        });
         changeGroupName = null;
         groupContent = null;
         groupInput = null;

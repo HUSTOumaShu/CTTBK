@@ -20,7 +20,6 @@ body {
 #Logo_ctt {
     height: 80px;
     width: 100%;
-    background-image: url(/assets/img/logo-cttdt.png);
     background-size: contain;
     background-repeat: no-repeat;
     border-top: 8px solid red;
@@ -76,7 +75,6 @@ body {
 .Avatar_img {
     width: 30px;
     height: 30px;
-    background-image: url(/assets/img/avt.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -99,6 +97,7 @@ body {
     height: 50px;
     width: 90%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #dddddd;
@@ -227,7 +226,6 @@ Buttons
 .Footer_img {
     width: 100%;
     height: 110px;
-    background-image: url(/assets/img/footer.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -251,4 +249,22 @@ Buttons
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
     width: 200px;
+}
+
+#btnExport {
+    background-color: white;
+    color: red;
+    border:1px solid red;
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#btnExport:hover {
+    background-color: red;
+    color: white;
+}
+#btnExport:active {
+    background-color: white;
+    color: red;
 }

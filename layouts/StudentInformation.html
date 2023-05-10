@@ -11,7 +11,7 @@
     <div class="Container">
 
         <div class="Header">
-            <div id="Logo_ctt" class="Logo"></div>
+            <div id="Logo_ctt" class="Logo" style="background-image: url(../assets/img/logo-cttdt.png);"></div>
             <div class="Border-Gradient"></div>
             <div class="Header_List">
                 <div class="Dropdown">
@@ -98,7 +98,7 @@
             <div class="Menu">
                 <div class="Menu_Board">
                     <div class="Avatar">
-                        <div class="Avatar_img"></div>
+                        <div class="Avatar_img" style="background-image: url(../assets/img/avt.jpg);"></div>
                         <div class="Tittle">TRẦN QUANG HUY</div>
                     </div>
                     <button id="btnMessage" class="Menu_Button">
@@ -156,7 +156,8 @@
 
             <div class="Content">
                 <div class="Tittle Content-Tittle">
-                    THÔNG TIN CÁ NHÂN
+                    THÔNG TIN CÁ NHÂN &nbsp;
+                    <button id="btnExport" onclick="Convert_HTML_to_PDF()">Export PDF</button>
                 </div>
 
                 <div class="Content_Board">
@@ -425,7 +426,7 @@
         </div>
 
         <div class="Footer">
-            <div class="Footer_img"></div>
+            <div class="Footer_img" style="background-image: url(../assets/img/footer.jpg);"></div>
             <div class="Footer_Content">
                 <p>Dai hoc Bach Khoa Ha Noi</p>
                 <p>So 1 Dai Co Viet, Hai Ba Trung</p>
@@ -438,6 +439,32 @@
     <!-- <script src="/js/index.js"></script> -->
     <script src="../js/index_dom.js"></script>
     <script src="../js/select.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.js" integrity=
+    "sha512-Bw9Zj8x4giJb3OmlMiMaGbNrFr0ERD2f9jL3en5FmcTXLhkI+fKyXVeyGyxKMIl1RfgcCBDprJJt4JvlglEb3A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+    integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        window.jsPDF = window.jspdf.jsPDF;
+        function Convert_HTML_to_PDF() {
+            var doc = new jsPDF();
+            var elementHTML = document.querySelector(".Content");
+            doc.html(elementHTML, {
+                callback: function(doc) {
+                    doc.save('ThongTinSinhVien.pdf');
+                },
+                margin: [10,10,10,10],
+                // autoPaging: 'text',
+                x: 0,
+                y: 0,
+                width: 190,
+                windowWidth: 1000
+            })
+        }
+    </script>
 
 </body>
 </html>
