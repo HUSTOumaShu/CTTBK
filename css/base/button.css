@@ -1,0 +1,43 @@
+.Menu_Button {
+    height: 40px;
+    width: 265px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13px;
+    background-color: #dddddd;
+    color: blue;
+    border:none;
+    border-bottom: 1px #cccccc solid;
+}
+.Menu_Button:hover {
+    background-color: #cccccc;
+    color: red;
+    cursor: pointer;
+}
+#Menu_Button_icon {
+    font-size: 10px;
+    color: red;
+}
+
+.DOM_Button {
+    width: 150px;
+    height: 30px;
+    background-color: rgb(241, 74, 74);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.DOM_Button:hover {
+    background-color: red;
+}
+.DOM_Button:active {
+    background-color: rgb(241, 74, 74);
+}

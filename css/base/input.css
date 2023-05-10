@@ -1,0 +1,15 @@
+.Input-default {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 8px 16px;
+    background: transparent;
+    width: 200px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.Input-default:active {
+    box-shadow: 2px 2px 15px blue inset;
+}
+.Input-default:focus {
+    border: 1px solid blue;
+    outline: none;
+}
