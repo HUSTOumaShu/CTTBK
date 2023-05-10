@@ -161,17 +161,17 @@
 
                 <div class="Content_Board">
 
-                    <div id="Student-Tittle_edit" class="Tittle Student-Tittle">
-                        <div>
+                    <div id="Student-Tittle1" class="Tittle Student-Tittle">
+                        <div id="groupTittle1" class="Tittle_Group">
                             Thong tin sinh vien_20204757 &nbsp;
                             <!-- <button id="btnEdit"><i class="fa-solid fa-pen-to-square"></i></button> -->
                         </div>
                         <div style="display:flex; gap: 8px;">
-                            <button class="DOM_Button">
+                            <button id="addItem1" class="DOM_Button addItem">
                                 <i class="fa-solid fa-square-plus"></i>
                                 Add Info Item
                             </button>
-                            <button class="DOM_Button">
+                            <button id="addGroup1" class="DOM_Button addGroup">
                                 <i class="fa-solid fa-cart-plus"></i>
                                 Add Group Item
                             </button>
@@ -179,7 +179,7 @@
 
                     </div>
 
-                    <div class="Student_Board">
+                    <!-- <div class="Student_Board"> -->
 
                         <!-- <div class="Student_img">
                             <img class="Img" src="../assets/img/avt.jpg">
@@ -233,40 +233,39 @@
 
                         <div class="Student_Info">
                             <div class="Info">
-                                <div class="Info_Tittle">Ho va ten: </div>
-                                <input type="text" class="Input-default" id="name" placeholder="" style="margin-left: 50px;"> &nbsp;
-                                <button class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                                <div id="tittle1_1" class="Info_Tittle">Ho va ten: </div>
+                                <input type="text" class="Input-default" id="input1_1" placeholder="" style="margin-left: 50px;">
+                                <button id="deleteItem1_1" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
 
                             <div class="Info">
-                                <div class="Info_Tittle">Ma so sinh vien: </div>
-                                <input type="text" class="Input-default" id="name" placeholder="" style="margin-left: 50px;"> &nbsp;
-                                <button class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                                <div id="tittle1_2" class="Info_Tittle">Ma so sinh vien: </div>
+                                <input type="text" class="Input-default" id="input1_2" placeholder="" style="margin-left: 50px;">
+                                <button id="deleteItem1_2" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
 
                             <div class="Info">
-                                <div class="Info_Tittle">Chuong trinh dao tao: </div>
-                                <input type="text" class="Input-default" id="name" placeholder="" style="margin-left: 50px;"> &nbsp;
-                                <button class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                                <div id="tittle1_3" class="Info_Tittle">Chuong trinh dao tao: </div>
+                                <input type="text" class="Input-default" id="input1_3" placeholder="" style="margin-left: 50px;">
+                                <button id="deleteItem1_3" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
 
                         </div>
 
-                    </div>
+                    <!-- </div> -->
 
+                    <!-- Second Board -->
 
                         <div class="Tittle Student-Tittle">
-                            <div>
-                                THONG TIN HOC TAP
-                                &nbsp;
-                                <button id="deleteGroup1" class="Button-delete_Group"><i class="fa-solid fa-trash"></i></button>
+                            <div id="groupTittle2" class="Tittle_Group">THONG TIN HOC TAP
+                                <button id="deleteGroup2" class="Button-delete_Group"><i class="fa-solid fa-trash-can"></i></button>
                             </div>
                             <div style="display:flex; gap: 8px;">
-                                <button class="DOM_Button">
+                                <button id="addItem2" class="DOM_Button addItem">
                                     <i class="fa-solid fa-square-plus"></i>
                                     Add Info Item
                                 </button>
-                                <button class="DOM_Button">
+                                <button id="addGroup2" class="DOM_Button addGroup">
                                     <i class="fa-solid fa-cart-plus"></i>
                                     Add Group Item
                                 </button>
@@ -274,62 +273,25 @@
                         </div>
                         <div class="Student_Info">
                             <div class="Info">
-                                <div class="Info_Tittle">Ho va ten: </div>
-                                <input type="text" class="Input-default" id="name" placeholder="" style="margin-left: 50px;"> &nbsp;
-                                <button id="deleteGroup2" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                                <div id="tittle2_1" class="Info_Tittle">Ho va ten: </div>
+                                <input type="text" class="Input-default" id="input2_1" placeholder="" style="margin-left: 50px;">
+                                <button id="delete2_1" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
 
                             <div class="Info">
-                                <div class="Info_Tittle">Ma so sinh vien: </div>
-                                <input type="text" class="Input-default" id="name" placeholder="" style="margin-left: 50px;"> &nbsp;
-                                <button class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                                <div id="tittle2_2" class="Info_Tittle">Ma so sinh vien: </div>
+                                <input type="text" class="Input-default" id="input2_2" placeholder="" style="margin-left: 50px;">
+                                <button id="delete2_2" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
 
                             <div class="Info">
-                                <div class="Info_Tittle">Chuong trinh dao tao: </div>
-                                <input type="text" class="Input-default" id="name" placeholder="" style="margin-left: 50px;"> &nbsp;
-                                <button class="Button-delete"><i class="fa-solid fa-trash"></i></button>
+                                <div id="tittle2_3" class="Info_Tittle">Chuong trinh dao tao: </div>
+                                <input type="text" class="Input-default" id="input2_3" placeholder="" style="margin-left: 50px;">
+                                <button id="delete2_3" class="Button-delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
 
                         </div>
 
-                        <div class="Tittle Student-Tittle">
-                            <div>
-                                THONG TIN HOC TAP
-                                &nbsp;
-                                <button class="Button-delete_Group"><i class="fa-solid fa-trash"></i></button>
-                            </div>
-                            <div style="display:flex; gap: 8px;">
-                                <button class="DOM_Button">
-                                    <i class="fa-solid fa-square-plus"></i>
-                                    Add Info Item
-                                </button>
-                                <button class="DOM_Button">
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                    Add Group Item
-                                </button>
-                            </div>
-                        </div>
-                        <div class="Student_Info">
-                            <div class="Info">
-                                <div class="Info_Tittle">Ho va ten: </div>
-                                <input type="text" class="Input-default" id="name" placeholder="" style="margin-left: 50px;"> &nbsp;
-                                <button class="Button-delete"><i class="fa-solid fa-trash"></i></button>
-                            </div>
-
-                            <div class="Info">
-                                <div class="Info_Tittle">Ma so sinh vien: </div>
-                                <input type="text" class="Input-default" id="name" placeholder="" style="margin-left: 50px;"> &nbsp;
-                                <button class="Button-delete"><i class="fa-solid fa-trash"></i></button>
-                            </div>
-
-                            <div class="Info">
-                                <div class="Info_Tittle">Chuong trinh dao tao: </div>
-                                <input type="text" class="Input-default" id="name" placeholder="" style="margin-left: 50px;"> &nbsp;
-                                <button class="Button-delete"><i class="fa-solid fa-trash"></i></button>
-                            </div>
-
-                        </div>
 
 
                     <!-- <div class="Tittle Student-Tittle">THONG TIN HOC TAP</div>
@@ -451,12 +413,12 @@
                         </div>
                     </div> -->
 
-                    <div class="Info">
+                    <!-- <div class="Info">
                         <div class="Info-Unit">Ghi chu :</div>
                         <div class="Info-Content">&nbsp;Neu sinh vien thay thong tin ca nhan cua minh
                             chua chinh xac, vui long lien he phong Dao tao de cap nhat lai.
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -471,11 +433,11 @@
         </div>
     </div>
 
-    <script src="/js/jquery-3.6.4.min.js"></script>
-    <script src="/js/StudentInformation.js"></script>
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <script src="../js/StudentInformation.js"></script>
     <!-- <script src="/js/index.js"></script> -->
-    <script src="/js/index_dom.js"></script>
-    <script src="/js/select.js"></script>
+    <script src="../js/index_dom.js"></script>
+    <script src="../js/select.js"></script>
 
 </body>
 </html>
